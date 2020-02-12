@@ -1,11 +1,19 @@
-import React, { FC } from 'react'
+import React from 'react'
 
-const Users: FC = () => {
-  return (
-    <div>
-      <h2>Users Works!</h2>
-    </div>
-  )
+import { User } from '../type'
+import UsersList from '../components/UsersList'
+
+const Users = () => {
+  const USERS: User[] = [
+    {
+      id: 'u1',
+      image: 'https://source.unsplash.com/random',
+      name: 'Tatsuya',
+      places: 3,
+    },
+  ]
+
+  return <UsersList items={USERS} />
 }
 
 export default Users
